@@ -41,17 +41,17 @@
         {
             //Arrange
             $input = new CountDay;
-            $day = 3;
-            $month = 12;
-            $year = 2002;
+            $day = 1;
+            $month = 1;
+            $year = 2000;
 
             //Act
             $result = $input->dayCalculation($day, $month, $year);
 
             //Assert
 
-            echo $result;
-            $this->assertEquals("Tuesday", $result);
+
+            $this->assertEquals("Saturday", $result);
         }
 
     }
