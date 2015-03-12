@@ -5,36 +5,53 @@
     class CountDayTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_count_day()
+        // function test_count_day()
+        // {
+        //     //Arrange
+        //     $input = new CountDay;
+        //     $day = 1;
+        //     $month = 1;
+        //     $year = 2000;
+        //
+        //     //Act
+        //     $result = $input->dayCalculation($day, $month);
+        //
+        //     //Assert
+        //
+        //     $this->assertEquals(1, $result);
+        // }
+        //
+        // function test_count_day2()
+        // {
+        //     //Arrange
+        //     $input = new CountDay;
+        //     $day = 10;
+        //     $month = 4;
+        //     $year = 2000;
+        //
+        //     //Act
+        //     $result = $input->dayCalculation($day, $month);
+        //
+        //     //Assert
+        //
+        //     $this->assertEquals(101, $result);
+        // }
+
+        function test_count_day_year()
         {
             //Arrange
             $input = new CountDay;
-            $day = 1;
-            $month = 1;
-            $year = 2000;
+            $day = 3;
+            $month = 12;
+            $year = 2002;
 
             //Act
-            $result = $input->dayCalculation($day, $month);
+            $result = $input->dayCalculation($day, $month, $year);
 
             //Assert
 
-            $this->assertEquals(1, $result);
-        }
-
-        function test_count_day2()
-        {
-            //Arrange
-            $input = new CountDay;
-            $day = 10;
-            $month = 4;
-            $year = 2000;
-
-            //Act
-            $result = $input->dayCalculation($day, $month);
-
-            //Assert
-
-            $this->assertEquals(101, $result);
+            echo $result;
+            $this->assertEquals("Tuesday", $result);
         }
 
     }
